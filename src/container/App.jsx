@@ -1,10 +1,10 @@
-
-
 import React from 'react';
 import Header from '../components/Header';
 import Search from '../components/Search';
 import Footer from '../components/Footer';
-import Carrusel from '../components/Carrusel';
+import Carousel from '../components/Carousel';
+import Categories from '../components/Categories';
+import CarouselItem from '../container/CarouselItem';
 
 
 
@@ -15,14 +15,12 @@ const App= () =>{
         <div className="App">
           <Header />
           <Search />
-          <Carrusel />
+          <Carousel />
+          <CarouselItem />
+          <Categories />
           <Footer />
-
-
-
 
         </div>
     );
-
 }
 export default App;
