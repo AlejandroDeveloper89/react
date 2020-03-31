@@ -1,11 +1,12 @@
+@import "./Vars.scss";
 *{
-    background: #8BFEF3;
+    background-color: $main-color;
 }
 .input {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid purple;
+    background-color: $main-color;
+    border: 2px solid $border-color;
     border-radius: 25px;
-    color: blue;
+    color: black;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
     height: 50px;
@@ -16,7 +17,7 @@
 }
 
 ::placeholder {
-    color: blue;
+    color: $border-color;
 }
 
 @media only screen and (max-width: 600px) {
@@ -27,4 +28,7 @@
         align-items: flex-start;
         flex-direction: column;
     }
+}
+.main__title{
+  color: $border-color;
 }

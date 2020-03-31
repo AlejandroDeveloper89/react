@@ -1,18 +1,47 @@
-
-.carousel-item {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 250px;
-    margin-right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 450ms all;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
+@import "./Vars.scss";
+body {
+    margin: 0;
+    font-family:$theme-font;
+    background:$main-color;
 }
+* {
+    box-sizing: border-box;
+}
+
+
+.carousel__title {
+    background: $border-color;
+
+    font-size: 16px;
+    margin-top: -16px;
+    position: absolute;
+    padding-left: 100px;
+    width: 100%;
+}
+
+
+
+.carousel__container {
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 16px;
+    white-space: inline-block;
+    margin: inline-block;
+    padding-bottom: 10px;
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+
 
 .carousel-item:hover~.carousel-item {
     -webkit-transform: translate3d(100px, 0, 0);
@@ -20,6 +49,7 @@
 }
 
 .carousel-item__img {
+  background: $border-color;
     width: 200px;
     height: 250px;
     -o-object-fit: cover;
@@ -27,9 +57,10 @@
 }
 
 .carousel-item__details {
+    color: $border-color;
     align-items: flex-start;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-    bottom: 0;
+    bottom: 0px;
     display: flex;
     font-size: 10px;
     flex-direction: column;
@@ -44,20 +75,27 @@
 }
 
 .carousel-item__details--img {
+    background: $border-color;
+    color: none;
     width: 20px;
+
 }
 
-.carousel-item:hover .carousel-item__details {
+.carousel-item__details {
+  color:none;
+  color: $border-color;
     opacity: 1;
 }
 
 .carousel-item__details--title {
-    color: white;
+    background: $border-color;
+    color: $subtitule-color;
     margin: 5px 0px 0px 0px;
 }
 
 .carousel-item__details--subtitle {
-    color: white;
+    background: $border-color;
+    color: $subtitule-color;
     font-size: 8px;
     margin: 3px 0px;
 }

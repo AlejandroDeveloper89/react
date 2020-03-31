@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Montse",
+      "location": "Canada"
+    },
+    {
+      "name": "Calixto Villavicencio",
+      "location": "Francia",
+      "id": 3
+    }
+  ]
+}
